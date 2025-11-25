@@ -6,167 +6,145 @@
   <title>ArtisanSmart — Devis IA, Factur-X & planning offline</title>
   <meta name="description" content="Devis en 20s avec l’IA, factures Factur-X conformes, planning offline. 50 places early à 29,90€/mois.">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX'); // ← Remplace par ton ID GA4
-  </script>
-
-  <!-- Microsoft Clarity (heatmaps) -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ton-id-clarity"); // ← Remplace par ton ID Clarity
-  </script>
+  <style>body { font-family: system-ui, sans-serif; }</style>
+  <!-- Favicon vert AS -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310B981'/%3E%3Ctext x='50%' y='58%' font-family='system-ui,Arial,sans-serif' font-size='19' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAS%3C/text%3E%3C/svg%3E">
 </head>
 <body class="bg-white text-slate-900">
+  <div class="flex flex-col min-h-screen">
+    <main class="flex-1">
 
-  <!-- HERO -->
-  <header class="bg-gradient-to-b from-slate-50 to-white py-20">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <div class="h-20 w-20 mx-auto mb-8 rounded-2xl bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
-        <span class="text-emerald-700 text-5xl font-black">AS</span>
-      </div>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-        Devis en 20 secondes<br>
-        <span class="text-emerald-600">avec l’IA + Factur-X incluse</span>
-      </h1>
-      <p class="text-2xl text-slate-600 mb-12 max-w-4xl mx-auto">
-        Tu dictes ou tu prends une photo → ArtisanSmart rédige un devis parfait, 100 % conforme Factur-X (obligatoire 2026), et gère ton planning même sans réseau.
-      </p>
-
-      <!-- CTA PRINCIPAL -->
-      <a href="#waitlist" class="inline-block px-12 py-6 bg-orange-500 text-white text-3xl font-bold rounded-full hover:bg-orange-600 shadow-2xl transition">
-        Je réserve ma place early (50 restantes)
-      </a>
-      <p class="text-2xl font-bold text-orange-600 mt-6">
-        29,90 € HT/mois – tarif garanti à vie
-      </p>
-    </div>
-  </header>
-
-  <!-- 3 BÉNÉFICES – NOUVELLES ICÔNES ARTISAN -->
-  <section class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-16 text-center">
-
-        <!-- 1. IA + Marteau -->
-        <div>
-          <svg width="100" height="100" viewBox="0 0 64 64" fill="none" class="mx-auto mb-8 text-emerald-600">
-            <path d="M32 8l8 8-8 8-8-8 8-8z" stroke="currentColor" stroke-width="3"/>
-            <path d="M24 32h16m-8-16v32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <path d="M16 48l-8-8 8-8" stroke="currentColor" stroke-width="3"/>
-          </svg>
-          <h3 class="text-3xl font-bold mb-6">Devis IA + Factur-X</h3>
-          <p class="text-xl text-slate-600">Tu dictes → l’IA rédige un devis pro + facture Factur-X conforme. 20s au lieu de 45 min.</p>
+      <!-- HERO -->
+      <header class="bg-gradient-to-b from-white to-emerald-50 py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <div class="h-20 w-20 mx-auto mb-8 rounded-2xl bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
+            <span class="text-emerald-700 text-5xl font-black">AS</span>
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+            Devis en 20 secondes<br>
+            <span class="text-emerald-600">avec l’IA + Factur-X incluse</span>
+          </h1>
+          <p class="text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Tu dictes ou tu prends une photo → ArtisanSmart rédige un devis parfait, 100 % conforme Factur-X (obligatoire 2026), et gère ton planning même sans réseau.
+          </p>
+          <a href="#waitlist" class="inline-block px-12 py-6 bg-orange-500 text-white text-3xl font-bold rounded-full hover:bg-orange-600 shadow-2xl transition">
+            Je réserve ma place early (50 restantes)
+          </a>
+          <p class="text-2xl font-bold text-orange-600 mt-6">
+            29,90 € HT/mois – tarif garanti à vie
+          </p>
         </div>
+      </header>
 
-        <!-- 2. OFFLINE + Casque -->
-        <div>
-          <svg width="100" height="100" viewBox="0 0 64 64" fill="none" class="mx-auto mb-8 text-emerald-600">
-            <path d="M32 8a24 24 0 0 0-24 24v16a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8V32a24 24 0 0 0-24-24z" stroke="currentColor" stroke-width="3"/>
-            <path d="M20 48h24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <line x1="16" y1="16" x2="48" y2="48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <h3 class="text-3xl font-bold mb-6">100 % offline</h3>
-          <p class="text-xl text-slate-600">Cave, sous-sol, montagne → tout fonctionne. Sync auto dès que tu captes.</p>
+      <!-- 3 BÉNÉFICES – Retour aux premiers émojis que tu aimais -->
+      <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid md:grid-cols-3 gap-16 text-center">
+
+            <div>
+              <div class="text-9xl mb-8">Dictée</div>
+              <h3 class="text-3xl font-bold mb-6">Devis IA ultra-simple</h3>
+              <p class="text-xl text-slate-600 leading-relaxed">
+                Tu dictes « rénovation salle de bain 10 m² » ou tu prends une photo → l’IA rédige un devis parfait, avec TVA, mentions légales, SIRET et Factur-X.<br>
+                <strong class="text-emerald-600">Zéro saisie, 100 % conforme.</strong>
+              </p>
+            </div>
+
+            <div>
+              <div class="text-9xl mb-8">No WiFi</div>
+              <h3 class="text-3xl font-bold mb-6">100 % offline</h3>
+              <p class="text-xl text-slate-600 leading-relaxed">
+                Cave, sous-sol, montagne → tout fonctionne.<br>
+                <strong class="text-emerald-600">Sync automatique dès que tu captes.</strong>
+              </p>
+            </div>
+
+            <div>
+              <div class="text-9xl mb-8">Phone</div>
+              <h3 class="text-3xl font-bold mb-6">Planning partagé client</h3>
+              <p class="text-xl text-slate-600 leading-relaxed">
+                Le client voit l’avancement en direct via un simple lien.<br>
+                <strong class="text-emerald-600">Presque plus d’appels clients pour connaître l’avancée des travaux.</strong>
+              </p>
+            </div>
+
+          </div>
         </div>
+      </section>
 
-        <!-- 3. PLANNING PARTAGÉ -->
-        <div>
-          <svg width="100" height="100" viewBox="0 0 64 64" fill="none" class="mx-auto mb-8 text-emerald-600">
-            <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="3"/>
-            <path d="M12 24h40M32 12v12" stroke="currentColor" stroke-width="3"/>
-            <circle cx="44" cy="40" r="6" fill="currentColor"/>
-            <circle cx="20" cy="40" r="6" fill="currentColor"/>
-          </svg>
-          <h3 class="text-3xl font-bold mb-6">Planning partagé client</h3>
-          <p class="text-xl text-slate-600">Le client voit l’avancement en direct → –10 appels/jour.</p>
+      <!-- FORMULAIRE – avec liste déroulante complète -->
+      <section id="waitlist" class="py-32 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+          <h2 class="text-5xl font-bold mb-8">Réserve ta place early</h2>
+          <p class="text-2xl text-slate-600 mb-16">
+            29,90 €/mois garanti à vie (au lieu de 49,90 €) – 50 places seulement
+          </p>
+
+          <form name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="bg-white p-12 rounded-3xl shadow-2xl space-y-10" onsubmit="handleFormSubmit(event)">
+            <input type="hidden" name="form-name" value="waitlist" />
+            <p hidden><input name="bot-field" /></p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <input type="text" name="prenom" placeholder="Prénom" required class="w-full p-5 rounded-xl border-2 text-lg focus:border-emerald-500" />
+              <input type="email" name="email" placeholder="Email" required class="w-full p-5 rounded-xl border-2 text-lg focus:border-emerald-500" />
+            </div>
+
+            <input type="text" name="metier" placeholder="Métier (plombier, électricien…)" required class="w-full p-5 rounded-xl border-2 text-lg" />
+
+            <div>
+              <label class="block text-left text-xl font-medium mb-4">Le critère qui te manque le plus aujourd’hui ?</label>
+              <select name="critere_manquant" required class="w-full p-5 rounded-xl border-2 text-lg focus:border-emerald-500">
+                <option value="" disabled selected>Choisis une réponse</option>
+                <option value="devis_rapides">Faire des devis rapides et propres</option>
+                <option value="factures_conformes">Factures conformes Factur-X (obligatoire 2026)</option>
+                <option value="planning_offline">Planning qui marche sans réseau</option>
+                <option value="suivi_client">Moins d’appels clients / suivi clair</option>
+                <option value="autre">Autre (précise ci-dessous)</option>
+              </select>
+            </div>
+
+            <textarea name="autre_precisions" rows="4" placeholder="Autre besoin ou précision (facultatif)" class="w-full p-5 rounded-xl border-2 text-lg"></textarea>
+
+            <label class="flex items-center gap-4 text-base text-slate-600">
+              <input type="checkbox" required class="w-6 h-6" />
+              <span>J’accepte d’être recontacté (RGPD – pas de spam)</span>
+            </label>
+
+            <button type="submit" class="w-full py-6 bg-orange-500 text-white text-2xl font-bold rounded-full hover:bg-orange-600 shadow-xl transition">
+              Je réserve ma place early (50 restantes)
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden mt-12 p-12 bg-emerald-50 rounded-3xl">
+            <p class="text-4xl font-bold text-emerald-700">Merci ! Ta place est réservée !</p>
+            <p class="text-2xl mt-6">On t’appelle sous 48h.</p>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="py-24 bg-slate-50">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-16">Ce qu’en disent les premiers pilotes</h2>
-      <div class="grid md:grid-cols-3 gap-12">
-        <blockquote class="p-8 bg-white rounded-2xl shadow">
-          <p class="text-xl mb-6">« J’ai gagné 2h par jour, même en cave sans réseau. »</p>
-          <cite class="font-bold text-emerald-600">Jean, plombier – Paris</cite>
-        </blockquote>
-        <blockquote class="p-8 bg-white rounded-2xl shadow">
-          <p class="text-xl mb-6">« Factur-X direct, mon comptable est ravi. »</p>
-          <cite class="font-bold text-emerald-600">Marie, électricienne – Lyon</cite>
-        </blockquote>
-        <blockquote class="p-8 bg-white rounded-2xl shadow">
-          <p class="text-xl mb-6">« Plus un seul appel client pour savoir où j’en suis. »</p>
-          <cite class="font-bold text-emerald-600">Paul, maçon – Bordeaux</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMULAIRE SIMPLIFIÉ -->
-  <section id="waitlist" class="py-32 bg-white">
-    <div class="max-w-xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold mb-8">Réserve ta place early</h2>
-      <p class="text-2xl text-slate-600 mb-12">
-        29,90 €/mois garanti à vie (au lieu de 49,90 €) – 50 places seulement
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-16 mt-auto text-center">
+      <p class="text-3xl font-bold mb-4">ArtisanSmart</p>
+      <p class="text-xl mb-6">Devis IA • Factur-X • Planning offline • Fabriqué en France</p>
+      <p class="text-sm text-slate-400">
+        © <span id="year"></span> ArtisanSmart – 50 places early disponibles
       </p>
-
-      <form name="waitlist" method="POST" data-netlify="true" class="space-y-8" onsubmit="handleFormSubmit(event)">
-        <input type="hidden" name="form-name" value="waitlist" />
-        <input type="email" name="email" placeholder="Ton email pro" required class="w-full p-5 rounded-xl border-2 text-xl focus:border-emerald-500" />
-        <select name="metier" required class="w-full p-5 rounded-xl border-2 text-xl">
-          <option value="" disabled selected>Ton métier</option>
-          <option>Plombier</option>
-          <option>Électricien</option>
-          <option>Maçon</option>
-          <option>Peintre</option>
-          <option>Menuisier</option>
-          <option>Autre</option>
-        </select>
-        <label class="flex items-center gap-4 text-lg">
-          <input type="checkbox" required class="w-6 h-6" />
-          <span>J’accepte d’être recontacté (RGPD – zéro spam)</span>
-        </label>
-        <button type="submit" class="w-full py-6 bg-orange-500 text-white text-2xl font-bold rounded-full hover:bg-orange-600 shadow-xl">
-          Je réserve ma place (50 restantes)
-        </button>
-      </form>
-
-      <div id="form-success" class="hidden mt-12 p-12 bg-emerald-50 rounded-3xl">
-        <p class="text-4xl font-bold text-emerald-700">Ta place est réservée !</p>
-        <p class="text-2xl mt-6">On t’appelle sous 48h.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-16 text-center">
-    <p class="text-3xl font-bold mb-4">ArtisanSmart</p>
-    <p class="text-xl mb-6">Devis IA • Factur-X • Planning offline • Fabriqué en France</p>
-    <p class="text-sm text-slate-400">
-      © <span id="year"></span> ArtisanSmart – 50 places early disponibles
-    </p>
-  </footer>
+    </footer>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
     function handleFormSubmit(e) {
       e.preventDefault();
       const form = e.target;
       fetch('/', { method: 'POST', body: new FormData(form) })
-        .then(() => { form.classList.add('hidden'); document.getElementById('form-success').classList.remove('hidden'); });
+        .then(() => {
+          form.classList.add('hidden');
+          document.getElementById('form-success').classList.remove('hidden');
+        });
     }
   </script>
 </body>
