@@ -11,118 +11,64 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310B981'/%3E%3Ctext x='50%' y='58%' font-family='system-ui,Arial,sans-serif' font-size='19' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAS%3C/text%3E%3C/svg%3E">
 </head>
 <body class="bg-slate-50 text-slate-900">
-  <div class="min-h-screen flex flex-col">
 
-    <!-- HERO -->
-    <header class="bg-gradient-to-b from-white to-emerald-50 py-20">
-      <div class="max-w-5xl mx-auto px-4 text-center">
-        <div class="h-16 w-16 mx-auto mb-6 rounded-2xl bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
-          <span class="text-emerald-700 text-4xl font-bold">AS</span>
-        </div>
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Devis en 20 secondes<br>
-          <span class="text-emerald-600">avec l’IA + Factur-X incluse</span>
-        </h1>
-        <p class="text-2xl text-slate-600 mb-10 max-w-4xl mx-auto">
-          Dicte ton chantier ou prends une photo → ArtisanSmart génère un devis pro, une facture Factur-X 100 % conforme et ton planning offline.<br>
-          <strong class="text-emerald-700">Lancement très prochainement</strong> – 20 places early disponibles.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-          <a href="#waitlist" class="px-10 py-5 bg-emerald-600 text-white text-2xl font-bold rounded-full hover:bg-emerald-500 shadow-xl">
+  <!-- Conteneur principal avec flex + mt-auto pour coller le footer en bas -->
+  <div class="flex flex-col min-h-screen">
+    <main class="flex-1">
+
+      <!-- ==== TOUT TON CONTENU ACTUEL (hero + sections + formulaire) ==== -->
+      <!-- (je remets juste le hero et le formulaire pour que ça tienne dans le message, mais tu gardes tout le reste que tu avais) -->
+
+      <!-- HERO -->
+      <header class="bg-gradient-to-b from-white to-emerald-50 py-20">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+          <div class="h-16 w-16 mx-auto mb-6 rounded-2xl bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
+            <span class="text-emerald-700 text-4xl font-bold">AS</span>
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            Devis en 20 secondes<br>
+            <span class="text-emerald-600">avec l’IA + Factur-X incluse</span>
+          </h1>
+          <p class="text-2xl text-slate-600 mb-10 max-w-4xl mx-auto">
+            Dicte ton chantier ou prends une photo → ArtisanSmart génère un devis pro, une facture Factur-X 100 % conforme et ton planning offline.<br>
+            <strong class="text-emerald-700">Lancement très prochainement</strong> – 20 places early disponibles.
+          </p>
+          <a href="#waitlist" class="inline-block px-10 py-5 bg-emerald-600 text-white text-2xl font-bold rounded-full hover:bg-emerald-500 shadow-xl">
             Réserver ma place early
           </a>
+          <p class="text-xl font-medium text-orange-700 mt-6">
+            Places limitées – 29,90 € HT/mois (tarif garanti à vie pour les 20 premiers)
+          </p>
         </div>
-        <p class="text-xl font-medium text-orange-700">
-          Places limitées – 29,90 € HT/mois (tarif garanti à vie pour les 20 premiers)
-        </p>
-      </div>
-    </header>
+      </header>
 
-    <!-- 3 BÉNÉFICES -->
-    <section class="py-20 bg-white">
+      <!-- … (tes autres sections : bénéfices, fonctionnalités, témoignages, pricing, etc.) … -->
+
+      <!-- FORMULAIRE (inchangé, juste pour référence) -->
+      <section id="waitlist" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <!-- ton formulaire ici -->
+      </section>
+
+    </main>
+
+    <!-- FOOTER – maintenant toujours visible et collé en bas -->
+    <footer class="bg-slate-900 text-white py-12 mt-auto">
       <div class="max-w-5xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-16">L’outil que tous les artisans attendent</h2>
-        <div class="grid md:grid-cols-3 gap-12">
-          <div>
-            <div class="text-7xl mb-6">IA</div>
-            <h3 class="text-2xl font-bold mb-4">Devis IA + Factur-X</h3>
-            <p class="text-lg text-slate-600">20 secondes au lieu de 45 min. Conforme dès 2026.</p>
-          </div>
-          <div>
-            <div class="text-7xl mb-6">No WiFi</div>
-            <h3 class="text-2xl font-bold mb-4">100 % offline</h3>
-            <p class="text-lg text-slate-600">Cave, montagne, sous-sol → tout fonctionne.</p>
-          </div>
-          <div>
-            <div class="text-7xl mb-6">Phone</div>
-            <h3 class="text-2xl font-bold mb-4">Planning partagé client</h3>
-            <p class="text-lg text-slate-600">-10 appels/jour. Le client voit l’avancement en direct.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WAITLIST – Formulaire enrichi -->
-    <section id="waitlist" class="py-24 bg-gradient-to-b from-slate-50 to-white">
-      <div class="max-w-2xl mx-auto px-6 text-center">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-6">Lancement imminent</h2>
-        <p class="text-2xl text-slate-600 mb-12">
-          Réserve ta place early → 29,90 €/mois garanti à vie (au lieu de 49,90 €)
+        <p class="text-2xl font-bold mb-2">ArtisanSmart</p>
+        <p class="text-lg mb-4">Devis IA • Factur-X • Planning offline • Fabriqué en France</p>
+        <p class="text-sm text-slate-400">
+          © <span id="year"></span> ArtisanSmart – Tous droits réservés<br>
+          Lancement imminent • 20 places early disponibles
         </p>
-
-        <form name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="bg-white p-10 rounded-3xl shadow-2xl space-y-8" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="form-name" value="waitlist" />
-          <p hidden><input name="bot-field" /></p>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <input type="text" name="prenom" placeholder="Prénom" required class="w-full p-4 rounded-xl border-2 text-lg focus:border-emerald-500 focus:ring-emerald-500" />
-            <input type="email" name="email" placeholder="Email" required class="w-full p-4 rounded-xl border-2 text-lg focus:border-emerald-500 focus:ring-emerald-500" />
-          </div>
-
-          <input type="text" name="metier" placeholder="Métier (plombier, électricien…)" required class="w-full p-4 rounded-xl border-2 text-lg" />
-
-          <!-- Menu déroulant – 4 critères qui manquent le plus -->
-          <div>
-            <label class="block text-left text-lg font-medium mb-3">Le critère qui te manque le plus aujourd’hui ?</label>
-            <select name="critere_manquant" required class="w-full p-4 rounded-xl border-2 text-lg">
-              <option value="" disabled selected>Choisis une réponse</option>
-              <option value="devis_rapides">Faire des devis rapides et propres</option>
-              <option value="factures_conformes">Factures conformes Factur-X (obligatoire 2026)</option>
-              <option value="planning_offline">Planning qui marche sans réseau</option>
-              <option value="suivi_client">Moins d’appels clients / suivi clair</option>
-              <option value="autre">Autre (précise ci-dessous)</option>
-            </select>
-          </div>
-
-          <textarea name="autre_precisions" rows="3" placeholder="Autre besoin ou précision (facultatif)" class="w-full p-4 rounded-xl border-2 text-lg"></textarea>
-
-          <label class="flex items-center gap-3 text-sm text-slate-600">
-            <input type="checkbox" name="rgpd" required class="w-5 h-5" />
-            <span>J’accepte d’être recontacté (RGPD – pas de spam)</span>
-          </label>
-
-          <button type="submit" class="w-full py-6 bg-emerald-600 text-white text-2xl font-bold rounded-full hover:bg-emerald-500 shadow-xl">
-            Réserver ma place early 
-          </button>
-        </form>
-
-        <div id="form-success" class="hidden mt-10 p-10 bg-emerald-50 rounded-3xl">
-          <p class="text-3xl font-bold text-emerald-700">Merci ! Ta place early est réservée !</p>
-          <p class="text-xl mt-4">On reviens vers toi lors du lancement.</p>
-        </div>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-white py-12 text-center">
-      <p class="text-xl">&copy; 2025 <strong>ArtisanSmart</strong> – Lancement très prochainement</p>
-      <p class="text-slate-400 mt-2">IA • Factur-X • Offline • Fabriqué en France</p>
     </footer>
   </div>
 
   <script>
-    document.querySelector('footer').innerHTML = document.querySelector('footer').innerHTML.replace('2025', new Date().getFullYear());
+    // Année dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Formulaire (inchangé)
     function handleFormSubmit(e) {
       e.preventDefault();
       const form = e.target;
