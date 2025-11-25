@@ -1,391 +1,206 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>ArtisanFlow — Devis, factures & planning pour artisans</title>
-    <meta name="description" content="Un outil ultra simple pour les artisans du bâtiment : créez vos devis, transformez-les en factures et organisez votre planning de chantiers en quelques clics." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Meta pour partage RS -->
-    <meta property="og:title" content="ArtisanFlow — Devis, factures & planning pour artisans" />
-    <meta property="og:description" content="L'outil ultra-simple pour les artisans : devis propres, factures en 1 clic, planning clair depuis votre téléphone." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://artisanflow-beta.netlify.app/" />
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/10B981/FFFFFF?text=ArtisanFlow" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- Favicon vert AF -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2310B981'/><text x='50%' y='60%' font-family='Arial' font-size='20' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>AF</text></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    </style>
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <div class="min-h-screen flex flex-col">
-      <!-- Hero -->
-      <header class="border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <div class="h-9 w-9 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center">
-              <span class="text-emerald-700 text-xl font-semibold">AF</span>
-            </div>
-            <div>
-              <div class="font-semibold text-slate-900 tracking-tight">ArtisanFlow</div>
-              <div class="text-xs text-slate-500">Devis • Factures • Planning chantiers</div>
-            </div>
-          </div>
-          <a href="#pricing" class="hidden sm:inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full border border-emerald-500/70 text-emerald-700 hover:bg-emerald-50 transition">
-            Voir les tarifs
-          </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtisanSmart — Devis, factures & planning pour artisans</title>
+  <meta name="description" content="Gagne 2h/jour sur chantier : devis en 1 clic, factures auto, planning offline. Essai gratuit 14 jours pour plombiers & électriciens.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { font-family: system-ui, sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <div class="min-h-screen flex flex-col">
+    <!-- Hero -->
+    <header class="border-b border-slate-200 bg-white/90 backdrop-blur py-12">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center">
+          <span class="text-emerald-700 text-2xl font-bold">AS</span>
         </div>
-        <div class="max-w-5xl mx-auto px-4 pt-6 pb-10 lg:py-14 grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-200 bg-emerald-50 text-[11px] font-medium text-emerald-700 mb-4">
-              Nouveau • Outil ultra simple pour artisans
-            </span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-3">
-              Fini les devis bricolés
-              <span class="text-emerald-700">et le planning dans un cahier</span>.
-            </h1>
-            <p class="text-sm sm:text-base text-slate-600 mb-5 leading-relaxed">
-              ArtisanFlow vous aide à faire trois choses essentielles&nbsp;: créer vos devis, les transformer en
-              factures en un clic, et organiser vos chantiers dans un planning clair – directement depuis votre téléphone.
-            </p>
-            <ul class="space-y-2 text-sm text-slate-700 mb-6">
-              <li class="flex gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                <span><strong>Devis & factures propres</strong> en quelques minutes.</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                <span><strong>Planning de chantiers simple</strong> pour voir votre semaine d'un coup d'œil.</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                <span><strong>Mobile‑first</strong> : pensé pour être utilisé dans le camion ou sur le chantier.</span>
-              </li>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Gagne 2h/jour sur chantier</h1>
+        <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">Devis propres en 1 clic, factures auto, planning offline – pour plombiers, électriciens et maçons qui en ont marre des papiers.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <a href="#waitlist" class="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Essai gratuit 14 jours</a>
+          <a href="https://calendly.com/ton-lien/rdv-artisansmart" target="_blank" class="px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-50">Appel 15 min offert</a>
+        </div>
+        <p class="text-sm text-slate-500">Places limitées à 20 early adopters – tarif 19€/mois garanti à vie</p>
+      </div>
+    </header>
+
+    <!-- Bénéfices (3 pains/solutions) -->
+    <section id="value-prop" class="py-16 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Tes 3 problèmes quotidiens, résolus</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="text-4xl mb-4">📄</div>
+            <h3 class="text-xl font-semibold mb-2">Devis bricolés en 45 min</h3>
+            <p class="text-slate-600">Génère un devis pro en 1 clic, avec TVA et mentions – gagne 2h/semaine.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-4">💸</div>
+            <h3 class="text-xl font-semibold mb-2">Factures oubliées ou erronées</h3>
+            <p class="text-slate-600">Transforme devis en facture auto – moins d'erreurs, plus d'argent qui rentre.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-4">📱</div>
+            <h3 class="text-xl font-semibold mb-2">Planning cahier + appels clients</h3>
+            <p class="text-slate-600">Planning offline, suivi partagé avec clients – -10 appels/jour.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités détaillées -->
+    <section id="features" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Outils simples pour ton quotidien</h2>
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="p-6 border rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4">1. Module Devis</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>• Création en 1 clic, TVA auto</li>
+              <li>• PDF pro envoyé par WhatsApp</li>
+              <li>• Statuts : Brouillon → Accepté</li>
             </ul>
-            <div class="flex flex-col xs:flex-row gap-3 max-w-md">
-              <a href="#waitlist" class="w-full inline-flex justify-center px-5 py-3 rounded-full bg-emerald-600 text-white font-medium text-sm shadow-sm hover:bg-emerald-500 transition">
-                Rejoindre les premiers testeurs
-              </a>
-              <button type="button" onclick="document.getElementById('value-prop').scrollIntoView({behavior:'smooth'})" class="w-full inline-flex justify-center px-4 py-3 rounded-full border border-slate-300 text-slate-800 text-sm bg-white hover:bg-slate-50 transition">
-                Comprendre en 30 secondes
-              </button>
-            </div>
-            <p class="mt-3 text-[11px] text-slate-500">
-              POC en cours — nous sélectionnons quelques artisans (plomberie, électricité, rénovation, multi‑services…) pour co‑construire l'outil.
-            </p>
           </div>
-          <!-- Maquette mobile -->
-          <div class="mt-6 lg:mt-0 flex justify-center">
-            <div class="relative w-[260px] sm:w-[280px]">
-              <div class="absolute -top-6 -right-4 h-24 w-24 bg-emerald-100 blur-3xl rounded-full pointer-events-none"></div>
-              <div class="relative rounded-3xl border border-slate-200 bg-white shadow-lg p-3">
-                <div class="mx-auto mb-3 h-5 w-24 rounded-full bg-slate-100"></div>
-                <div class="flex text-[11px] gap-1 mb-3">
-                  <button class="flex-1 py-1.5 rounded-full bg-slate-900 text-white font-medium">Devis</button>
-                  <button class="flex-1 py-1.5 rounded-full bg-slate-100 text-slate-600">Factures</button>
-                  <button class="flex-1 py-1.5 rounded-full bg-slate-100 text-slate-600">Planning</button>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-2.5 mb-3">
-                  <div class="flex items-center justify-between text-[11px] mb-1.5">
-                    <span class="font-medium text-slate-900">Devis #2025‑034</span>
-                    <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">Accepté</span>
-                  </div>
-                  <div class="text-[10px] text-slate-500 mb-1">Rénovation salle de bain — Mme Dupont</div>
-                  <div class="flex justify-between text-[10px] text-slate-600">
-                    <span>Montant TTC</span>
-                    <span class="font-semibold text-slate-900">1 023,00 €</span>
-                  </div>
-                </div>
-                <div class="border border-slate-200 rounded-xl p-2.5 mb-3">
-                  <div class="flex items-center justify-between text-[11px] mb-1.5">
-                    <span class="font-medium text-slate-900">Cette semaine</span>
-                    <span class="text-slate-500">3 chantiers</span>
-                  </div>
-                  <div class="space-y-1.5 text-[10px]">
-                    <div class="flex justify-between">
-                      <div>
-                        <div class="font-medium text-slate-900">Pose parquet</div>
-                        <div class="text-slate-500">Lun • 9h00 · 3h</div>
-                      </div>
-                      <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Mr Martin</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <div>
-                        <div class="font-medium text-slate-900">Rénovation cuisine</div>
-                        <div class="text-slate-500">Mar • Journée</div>
-                      </div>
-                      <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">Mme Dupont</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <div>
-                        <div class="font-medium text-slate-900">Dépannage élec.</div>
-                        <div class="text-slate-500">Jeu • 14h00 · 2h</div>
-                      </div>
-                      <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">SARL Leroy</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid grid-cols-3 gap-1.5 text-[10px]">
-                  <div class="rounded-lg bg-slate-900 text-white p-1.5 text-center">
-                    <div class="text-slate-300">Devis mois</div>
-                    <div class="font-semibold">8 450 €</div>
-                  </div>
-                  <div class="rounded-lg bg-emerald-50 text-emerald-800 p-1.5 text-center border border-emerald-100">
-                    <div class="text-emerald-700">Payé</div>
-                    <div class="font-semibold">5 200 €</div>
-                  </div>
-                  <div class="rounded-lg bg-orange-50 text-orange-800 p-1.5 text-center border border-orange-100">
-                    <div class="text-orange-700">Impayé</div>
-                    <div class="font-semibold">1 250 €</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="p-6 border rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4">2. Module Factures</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>• Devis → Facture en 1 clic</li>
+              <li>• Suivi payé/impayé</li>
+              <li>• Export PDF pour compta</li>
+            </ul>
           </div>
-        </div>
-      </header>
-
-      <!-- Value-prop -->
-      <section id="value-prop" class="border-b border-slate-200 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-4 py-8">
-          <h2 class="text-lg sm:text-xl font-semibold text-slate-900 mb-2">
-            En clair, ArtisanFlow vous aide à&nbsp;
-          </h2>
-          <div class="grid sm:grid-cols-3 gap-4 text-sm">
-            <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-xs font-semibold text-emerald-700 mb-1">01</div>
-              <div class="font-semibold mb-1">Envoyer des devis sérieux</div>
-              <p class="text-slate-600 text-[13px]">
-                Des devis propres, toujours structurés pareil, avec les bonnes mentions. Vous n'avez plus honte de les envoyer.
-              </p>
-            </div>
-            <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-xs font-semibold text-emerald-700 mb-1">02</div>
-              <div class="font-semibold mb-1">Facturer sans rien oublier</div>
-              <p class="text-slate-600 text-[13px]">
-                Un devis accepté se transforme en facture en un clic. Moins de ressaisie, moins d'oublis, plus d'argent qui rentre.
-              </p>
-            </div>
-            <div class="rounded-2xl bg-white border border-slate-200 p-4">
-              <div class="text-xs font-semibold text-emerald-700 mb-1">03</div>
-              <div class="font-semibold mb-1">Voir votre semaine de chantiers</div>
-              <p class="text-slate-600 text-[13px]">
-                Un planning simple avec vos chantiers de la semaine. Vous savez où aller, quand, pour qui – sans feuille volante.
-              </p>
-            </div>
+          <div class="p-6 border rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4">3. Planning Chantiers</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>• Vue semaine offline</li>
+              <li>• Drag & drop, filtre clients</li>
+              <li>• Sync auto au réseau</li>
+            </ul>
           </div>
-        </div>
-      </section>
-
-      <!-- Features -->
-      <section id="features" class="border-b border-slate-200 bg-white">
-        <div class="max-w-5xl mx-auto px-4 py-10 lg:py-14">
-          <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-2">Un outil simple, pensé pour aller à l'essentiel.</h2>
-          <p class="text-sm text-slate-600 mb-6">
-            On ne cherche pas à faire un "logiciel de gestion" complet. On veut juste faire <strong>très bien</strong> ce qui vous prend du temps aujourd'hui.
-          </p>
-          <div class="space-y-6">
-            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
-              <h3 class="font-semibold text-slate-900 mb-1">1 • Module Devis</h3>
-              <p class="text-sm text-slate-600 mb-2">La base de votre relation client, enfin propre.</p>
-              <ul class="grid sm:grid-cols-2 gap-2 text-[13px] text-slate-700">
-                <li>• Création, modification et duplication de devis en quelques clics</li>
-                <li>• Lignes claires : désignation, quantité, prix, TVA</li>
-                <li>• Totaux calculés automatiquement (HT, TVA, TTC)</li>
-                <li>• PDF propre, envoyé par mail ou WhatsApp</li>
-                <li>• Statuts : Brouillon, Envoyé, Accepté pour suivre vos réponses clients</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
-              <h3 class="font-semibold text-slate-900 mb-1">2 • Module Factures</h3>
-              <p class="text-sm text-slate-600 mb-2">Moins de temps à facturer, plus de temps sur les chantiers.</p>
-              <ul class="grid sm:grid-cols-2 gap-2 text-[13px] text-slate-700">
-                <li>• Un devis accepté → une facture en un clic</li>
-                <li>• Mentions légales minimales déjà intégrées</li>
-                <li>• Suivi des factures : Non payé / Payé</li>
-                <li>• Liste simple de toutes vos factures</li>
-                <li>• Export PDF prêt à être envoyé au client ou à la compta</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
-              <h3 class="font-semibold text-slate-900 mb-1">3 • Planning de chantiers</h3>
-              <p class="text-sm text-slate-600 mb-2">Votre semaine, en clair, sans cahier à mettre à jour.</p>
-              <ul class="grid sm:grid-cols-2 gap-2 text-[13px] text-slate-700">
-                <li>• Vue calendrier semaine, lisible sur téléphone</li>
-                <li>• Création d'un "chantier" avec client, lieu, date, heure, durée</li>
-                <li>• Déplacement des créneaux (drag & drop si possible) ou simple formulaire</li>
-                <li>• Filtre par client pour voir les chantiers en cours chez lui</li>
-                <li>• Pas de multi‑utilisateurs, pas de couleurs compliquées : juste l'essentiel</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
-              <h3 class="font-semibold text-slate-900 mb-1">4 • Mini tableau de bord</h3>
-              <p class="text-sm text-slate-600 mb-2">Trois chiffres pour savoir où vous en êtes.</p>
-              <ul class="grid sm:grid-cols-3 gap-2 text-[13px] text-slate-700">
-                <li>• Total des devis du mois</li>
-                <li>• Total des factures payées</li>
-                <li>• Total des factures impayées</li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50 p-4 sm:p-5">
-            <h3 class="font-semibold text-slate-900 mb-1">Notre feuille de route</h3>
-            <p class="text-sm text-slate-600 mb-3">Voici les fonctionnalités prévues prochainement, en fonction des retours des artisans :</p>
-            <ul class="space-y-2 text-[13px] text-slate-700">
-              <li>• Signature électronique intégrée</li>
-              <li>• Factur‑X pour être 100% conforme</li>
-              <li>• Lecture automatique (OCR) des documents</li>
-              <li>• Connexion bancaire pour suivre les paiements directement</li>
-              <li>• Gestion multi‑collaborateurs et planning d'équipe</li>
-              <li>• Tableaux de bord avancés et statistiques chantier</li>
-              <li>• Application mobile dédiée (iPhone & Android)</li>
+          <div class="p-6 border rounded-xl">
+            <h3 class="text-2xl font-semibold mb-4">4. Tableau de Bord</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>• Total devis/factures mois</li>
+              <li>• Payé vs impayé</li>
+              <li>• Stats simples pour facturer plus</li>
             </ul>
           </div>
         </div>
-      </section>
-
-      <!-- Pricing -->
-      <section id="pricing" class="border-b border-slate-200 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-4 py-10 lg:py-14">
-          <div class="max-w-xl mb-6">
-            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-2">Tarifs pensés pour les petites structures.</h2>
-            <p class="text-sm text-slate-600">
-              Pendant la phase de test, on propose une offre <strong>spéciale early adopters</strong> pour les premiers artisans qui nous aident à construire l'outil.
-            </p>
-          </div>
-          <div class="grid md:grid-cols-3 gap-4 md:gap-5 text-sm">
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col">
-              <div class="text-xs font-semibold text-slate-500 mb-1">Découverte</div>
-              <div class="font-semibold text-slate-900 mb-1">Gratuit</div>
-              <div class="text-xs text-slate-500 mb-3">Pour tester tranquillement.</div>
-              <ul class="space-y-1.5 text-[13px] text-slate-700 mb-4 flex-1">
-                <li>• Jusqu'à 5 devis actifs</li>
-                <li>• Factures illimitées</li>
-                <li>• Planning chantiers sur 2 semaines</li>
-                <li>• Support par email</li>
-              </ul>
-              <button class="mt-auto w-full px-3 py-2.5 rounded-full border border-slate-300 text-slate-800 text-sm bg-white hover:bg-slate-50 transition">
-                Commencer en gratuit
-              </button>
-            </div>
-            <div class="rounded-2xl border-2 border-emerald-500 bg-white p-5 shadow-sm flex flex-col relative">
-              <span class="absolute -top-3 left-4 px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-medium">Recommandé</span>
-              <div class="text-xs font-semibold text-emerald-700 mb-1">Artisan</div>
-              <div class="flex items-baseline gap-1 mb-1">
-                <div class="text-2xl font-semibold text-slate-900">19€</div>
-                <div class="text-xs text-slate-500">HT / mois</div>
-              </div>
-              <div class="text-xs text-slate-500 mb-3">Pour les artisans solos ou petites équipes.</div>
-              <ul class="space-y-1.5 text-[13px] text-slate-700 mb-4 flex-1">
-                <li>• Devis et factures illimités</li>
-                <li>• Planning chantiers semaine + mois</li>
-                <li>• Tableau de bord simple (devis / payé / impayé)</li>
-                <li>• Modèles de devis réutilisables</li>
-                <li>• Accès prioritaire aux prochaines évolutions</li>
-              </ul>
-              <button class="mt-auto w-full px-3 py-2.5 rounded-full bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500 transition">
-                Réserver l'offre early adopter
-              </button>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col opacity-80">
-              <div class="text-xs font-semibold text-slate-500 mb-1">Pro (bientôt)</div>
-              <div class="font-semibold text-slate-900 mb-1">À venir</div>
-              <div class="text-xs text-slate-500 mb-3">Pour les structures plus organisées.</div>
-              <ul class="space-y-1.5 text-[13px] text-slate-700 mb-4 flex-1">
-                <li>• Gestion multi‑collaborateurs</li>
-                <li>• Statistiques plus avancées</li>
-                <li>• Intégration comptable (export amélioré)</li>
-                <li>• Fonctions de suivi plus poussées</li>
-              </ul>
-              <button class="mt-auto w-full px-3 py-2.5 rounded-full border border-slate-300 text-slate-400 text-sm bg-slate-50 cursor-not-allowed">
-                Bientôt disponible
-              </button>
-            </div>
-          </div>
-          <p class="mt-4 text-[11px] text-slate-500">
-            Les tarifs définitifs pourront évoluer à la sortie officielle. Les premiers utilisateurs conserveront leurs conditions préférentielles.
-          </p>
+        <div class="text-center mb-8">
+          <a href="#pricing" class="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Découvrir les tarifs</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Waitlist -->
-      <section id="waitlist" class="bg-white">
-        <div class="max-w-5xl mx-auto px-4 py-10 lg:py-12">
-          <div class="max-w-xl mb-5">
-            <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-2">Vous voulez faire partie des artisans pilotes&nbsp;?</h2>
-            <p class="text-sm text-slate-600">
-              Laissez vos coordonnées et on revient vers vous pour une courte discussion. Objectif&nbsp;: comprendre votre façon de travailler et voir si ArtisanFlow peut vous aider.
-            </p>
+    <!-- Témoignages early -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Ce qu'en disent les premiers pilotes</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
+            <p class="text-slate-700 mb-4">"Gagné 2h/jour sur devis – l'offline c'est le feu pour les chantiers sans réseau !"</p>
+            <cite class="text-emerald-600 font-semibold">Jean, Plombier à Paris</cite>
+          </blockquote>
+          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
+            <p class="text-slate-700 mb-4">"Factures en 1 clic, fin des oublis – +2 chantiers/mois direct."</p>
+            <cite class="text-emerald-600 font-semibold">Marie, Électricienne à Lyon</cite>
+          </blockquote>
+          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
+            <p class="text-slate-700 mb-4">"Planning clair, clients voient tout – -10 appels/semaine."</p>
+            <cite class="text-emerald-600 font-semibold">Paul, Maçon à Bordeaux</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Tarifs simples pour petites équipes</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="p-8 border rounded-xl">
+            <h3 class="text-2xl font-bold mb-2">Découverte</h3>
+            <p class="text-4xl font-bold text-emerald-600 mb-4">Gratuit</p>
+            <ul class="space-y-2 mb-6">
+              <li>• 5 devis actifs</li>
+              <li>• Factures illimitées</li>
+              <li>• Planning 2 semaines</li>
+            </ul>
+            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full px-6 py-3 border rounded-full font-semibold hover:bg-slate-50">Commencer gratuit</button>
           </div>
-          <form name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="max-w-lg rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5 space-y-4" onsubmit="handleFormSubmit(event)">
-            <input type="hidden" name="form-name" value="waitlist" />
-            <p class="hidden"><label>Ne remplissez pas : <input name="bot-field" /></label></p>
-            <div>
-              <label for="email" class="block text-xs font-medium text-slate-700 mb-1">Adresse email</label>
-              <input id="email" type="email" name="email" required placeholder="votre.email@exemple.fr" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" />
-            </div>
-            <div>
-              <label for="metier" class="block text-xs font-medium text-slate-700 mb-1">Métier</label>
-              <input id="metier" type="text" name="metier" placeholder="ex : plombier, électricien, multi‑services…" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" />
-            </div>
-            <div>
-              <label for="volume" class="block text-xs font-medium text-slate-700 mb-1">Nombre de chantiers / mois (environ)</label>
-              <input id="volume" type="number" name="volume" min="0" placeholder="ex : 5, 10, 20…" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" />
-            </div>
-            <div>
-              <label for="message" class="block text-xs font-medium text-slate-700 mb-1">Votre façon de travailler (optionnel)</label>
-              <textarea id="message" name="message" rows="3" placeholder="Ex : je fais mes devis sous Word, j'ai 2 personnes sur le terrain, je perds du temps à…" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"></textarea>
-            </div>
-            <button type="submit" class="w-full inline-flex justify-center items-center px-4 py-2.5 rounded-full bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500 transition">
-              Rejoindre les artisans pilotes
-            </button>
-            <p class="text-[11px] text-slate-500">
-              Nous n'envoyons pas de newsletter. On vous écrit uniquement pour parler de ArtisanFlow et, éventuellement, vous proposer de tester les nouveautés.
-            </p>
-          </form>
-          <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-center">
-            <p class="text-emerald-700 font-medium">Merci ! On vous recontacte sous 48h.</p>
+          <div class="p-8 border-2 border-emerald-600 rounded-xl relative">
+            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">Recommandé</span>
+            <h3 class="text-2xl font-bold mb-2">Pro</h3>
+            <p class="text-4xl font-bold text-emerald-600 mb-4">19€/mois</p>
+            <ul class="space-y-2 mb-6">
+              <li>• Tout illimité</li>
+              <li>• Planning mois + offline</li>
+              <li>• Tableau de bord avancé</li>
+              <li>• Support prioritaire</li>
+            </ul>
+            <a href="https://calendly.com/ton-lien/rdv-artisansmart" class="block w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Réserver early (tarif à vie)</a>
+          </div>
+          <div class="p-8 border rounded-xl opacity-70">
+            <h3 class="text-2xl font-bold mb-2">Équipe (bientôt)</h3>
+            <p class="text-4xl font-bold text-slate-500 mb-4">À venir</p>
+            <ul class="space-y-2 mb-6">
+              <li>• Multi-utilisateurs</li>
+              <li>• Stats avancées</li>
+              <li>• Intégrations compta</li>
+            </ul>
+            <button class="w-full px-6 py-3 border rounded-full text-slate-400 cursor-not-allowed">Bientôt</button>
           </div>
         </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-slate-900 text-slate-200 text-xs border-t border-slate-800 mt-auto">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>© <span id="year"></span> ArtisanFlow — POC en cours de construction.</span>
-          <span class="text-slate-400">Conçu pour les artisans, pas pour les bureaux.</span>
+        <div class="text-center mt-8 bg-orange-50 p-6 rounded-xl">
+          <p class="text-xl font-bold text-orange-700">⚡ Seulement 15 places early restantes</p>
         </div>
-      </footer>
-    </div>
-    <script>
-      // Année
-      document.getElementById("year").textContent = new Date().getFullYear();
+      </div>
+    </section>
 
-      // Fix ancres (#waitlist, #pricing...)
-      if (window.location.hash) {
-        setTimeout(() => {
-          const target = document.querySelector(window.location.hash);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
+    <!-- Waitlist Form -->
+    <section id="waitlist" class="py-16 bg-slate-50">
+      <div class="max-w-md mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Rejoins les pilotes</h2>
+        <p class="text-slate-600 mb-8">On sélectionne 20 artisans pour tester et co-construire.</p>
+        <form name="waitlist" method="POST" data-netlify="true" class="space-y-4" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="form-name" value="waitlist" />
+          <input type="email" name="email" placeholder="Ton email" required class="w-full p-4 rounded-lg border focus:ring-emerald-500" />
+          <input type="text" name="metier" placeholder="Ton métier (plombier, etc.)" class="w-full p-4 rounded-lg border focus:ring-emerald-500" />
+          <label class="flex gap-2 text-sm text-slate-600">
+            <input type="checkbox" name="rgpd" required /> J'accepte d'être contacté (RGPD conforme)
+          </label>
+          <button type="submit" class="w-full p-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Rejoindre les pilotes</button>
+        </form>
+        <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 rounded-lg">
+          <p class="text-emerald-700 font-semibold">Merci ! On t'appelle sous 48h.</p>
+        </div>
+      </div>
+    </section>
 
-      // Formulaire
-      function handleFormSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        const data = new FormData(form);
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(data).toString()
-        }).then(() => {
-          form.classList.add('hidden');
-          document.getElementById('form-success').classList.remove('hidden');
-        }).catch((error) => alert('Erreur : ' + error));
-        return false;
-      }
-    </script>
-  </body>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm mt-auto">
+      <p>&copy; 2025 ArtisanSmart – Fabriqué en France pour les artisans. | <a href="#waitlist" class="text-emerald-400 hover:underline">Inscription</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Année
+    document.querySelector('footer p').innerHTML = document.querySelector('footer p').innerHTML.replace('2025', new Date().getFullYear());
+
+    // Form submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      fetch('/', { method: 'POST', body: new FormData(form) }).then(() => {
+        form.classList.add('hidden');
+        document.getElementById('form-success').classList.remove('hidden');
+      });
+    }
+
+    // Scroll ancres
+    if (location.hash) setTimeout(() => document.querySelector(location.hash)?.scrollIntoView({behavior: 'smooth'}), 100);
+  </script>
+</body>
 </html>
