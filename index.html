@@ -3,204 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArtisanSmart — Devis, factures & planning pour artisans</title>
-  <meta name="description" content="Gagne 2h/jour sur chantier : devis en 1 clic, factures auto, planning offline. Essai gratuit 14 jours pour plombiers & électriciens.">
+  <title>ArtisanSmart — Devis IA, Factur-X & planning offline</title>
+  <meta name="description" content="Devis en 20s avec l’IA, factures Factur-X conformes, planning offline. Essai gratuit 14 jours pour plombiers & électriciens.">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>body { font-family: system-ui, sans-serif; }</style>
 </head>
 <body class="bg-slate-50 text-slate-900">
   <div class="min-h-screen flex flex-col">
-    <!-- Hero -->
-    <header class="border-b border-slate-200 bg-white/90 backdrop-blur py-12">
+
+    <!-- HERO -->
+    <header class="bg-gradient-to-b from-white to-emerald-50 py-16">
       <div class="max-w-5xl mx-auto px-4 text-center">
-        <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center">
-          <span class="text-emerald-700 text-2xl font-bold">AS</span>
+        <div class="h-14 w-14 mx-auto mb-6 rounded-2xl bg-emerald-100 border-2 border-emerald-300 flex items-center justify-center">
+          <span class="text-emerald-700 text-3xl font-bold">AS</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Gagne 2h/jour sur chantier</h1>
-        <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">Devis propres en 1 clic, factures auto, planning offline – pour plombiers, électriciens et maçons qui en ont marre des papiers.</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Devis en 20 secondes<br>
+          <span class="text-emerald-600">avec l’IA + Factur-X incluse</span>
+        </h1>
+        <p class="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+          Dicte ton chantier ou prends une photo → ArtisanSmart génère un devis pro, une facture Factur-X 100 % conforme, et ton planning offline.  
+          Gagne 2h/jour, même sans réseau.
+        </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-          <a href="#waitlist" class="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Essai gratuit 14 jours</a>
-          <a href="https://calendly.com/ton-lien/rdv-artisansmart" target="_blank" class="px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-50">Appel 15 min offert</a>
+          <a href="#waitlist" class="px-8 py-4 bg-emerald-600 text-white text-xl font-semibold rounded-full hover:bg-emerald-500 shadow-lg">
+            Essai gratuit 14 jours
+          </a>
+          <a href="https://calendly.com/ton-lien/rdv-artisansmart" target="_blank" class="px-8 py-4 border-2 border-emerald-600 text-emerald-600 text-xl font-semibold rounded-full hover:bg-emerald-50">
+            Appel 15 min offert
+          </a>
         </div>
-        <p class="text-sm text-slate-500">Places limitées à 20 early adopters – tarif 19€/mois garanti à vie</p>
+        <p class="text-lg font-medium text-orange-700">
+          ⚡ Seulement 15 places early à 19 €/mois (tarif garanti à vie)
+        </p>
       </div>
     </header>
 
-    <!-- Bénéfices (3 pains/solutions) -->
-    <section id="value-prop" class="py-16 bg-slate-50">
+    <!-- 3 BÉNÉFICES -->
+    <section class="py-16 bg-white">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Tes 3 problèmes quotidiens, résolus</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Tes 3 problèmes quotidiens → résolus</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">📄</div>
-            <h3 class="text-xl font-semibold mb-2">Devis bricolés en 45 min</h3>
-            <p class="text-slate-600">Génère un devis pro en 1 clic, avec TVA et mentions – gagne 2h/semaine.</p>
+          <div class="text-center">
+            <div class="text-6xl mb-4">🗣️</div>
+            <h3 class="text-2xl font-bold mb-3">Devis en 20s avec l’IA</h3>
+            <p class="text-slate-600">Dicte ou prends une photo → devis pro avec TVA, mentions légales, SIRET.</p>
           </div>
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">💸</div>
-            <h3 class="text-xl font-semibold mb-2">Factures oubliées ou erronées</h3>
-            <p class="text-slate-600">Transforme devis en facture auto – moins d'erreurs, plus d'argent qui rentre.</p>
+          <div class="text-center">
+            <div class="text-6xl mb-4">📄</div>
+            <h3 class="text-2xl font-bold mb-3">Factur-X 100 % conforme</h3>
+            <p class="text-slate-600">Obligatoire en 2026 → déjà intégré. Tes factures passent direct chez le comptable.</p>
           </div>
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">📱</div>
-            <h3 class="text-xl font-semibold mb-2">Planning cahier + appels clients</h3>
-            <p class="text-slate-600">Planning offline, suivi partagé avec clients – -10 appels/jour.</p>
+          <div class="text-center">
+            <div class="text-6xl mb-4">📱</div>
+            <h3 class="text-2xl font-bold mb-3">Planning offline + suivi client</h3>
+            <p class="text-slate-600">Fonctionne partout, même en cave. Clients voient l’avancement → -10 appels/jour.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Fonctionnalités détaillées -->
-    <section id="features" class="py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Outils simples pour ton quotidien</h2>
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div class="p-6 border rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4">1. Module Devis</h3>
-            <ul class="space-y-2 text-slate-700">
-              <li>• Création en 1 clic, TVA auto</li>
-              <li>• PDF pro envoyé par WhatsApp</li>
-              <li>• Statuts : Brouillon → Accepté</li>
-            </ul>
-          </div>
-          <div class="p-6 border rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4">2. Module Factures</h3>
-            <ul class="space-y-2 text-slate-700">
-              <li>• Devis → Facture en 1 clic</li>
-              <li>• Suivi payé/impayé</li>
-              <li>• Export PDF pour compta</li>
-            </ul>
-          </div>
-          <div class="p-6 border rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4">3. Planning Chantiers</h3>
-            <ul class="space-y-2 text-slate-700">
-              <li>• Vue semaine offline</li>
-              <li>• Drag & drop, filtre clients</li>
-              <li>• Sync auto au réseau</li>
-            </ul>
-          </div>
-          <div class="p-6 border rounded-xl">
-            <h3 class="text-2xl font-semibold mb-4">4. Tableau de Bord</h3>
-            <ul class="space-y-2 text-slate-700">
-              <li>• Total devis/factures mois</li>
-              <li>• Payé vs impayé</li>
-              <li>• Stats simples pour facturer plus</li>
-            </ul>
-          </div>
-        </div>
-        <div class="text-center mb-8">
-          <a href="#pricing" class="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Découvrir les tarifs</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Témoignages early -->
+    <!-- FONCTIONNALITÉS -->
     <section class="py-16 bg-slate-50">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Ce qu'en disent les premiers pilotes</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Tout ce qu’il te faut (et rien de plus)</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border shadow-sm">
+            <h3 class="text-2xl font-bold mb-4">Devis IA & Factur-X</h3>
+            <ul class="space-y-3 text-slate-700">
+              <li>• Dictée vocale ou photo → devis en 20s</li>
+              <li>• Factur-X générée automatiquement (conforme 2026)</li>
+              <li>• PDF + envoi WhatsApp/mail en 1 clic</li>
+              <li>• Signature électronique sur place</li>
+            </ul>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border shadow-sm">
+            <h3 class="text-2xl font-bold mb-4">Planning & suivi chantier</h3>
+            <ul class="space-y-3 text-slate-700">
+              <li>• 100 % offline + sync auto</li>
+              <li>• Lien partagé client (photos, notes, % avancement)</li>
+              <li>• Drag & drop sur téléphone</li>
+              <li>• Rappels automatiques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Ce qu’en disent les premiers pilotes</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
-            <p class="text-slate-700 mb-4">"Gagné 2h/jour sur devis – l'offline c'est le feu pour les chantiers sans réseau !"</p>
-            <cite class="text-emerald-600 font-semibold">Jean, Plombier à Paris</cite>
+          <blockquote class="p-6 bg-emerald-50 rounded-xl">
+            <p class="text-lg mb-4">« 2h gagnées par jour, même en cave sans réseau ! »</p>
+            <cite class="font-semibold text-emerald-700">Jean, plombier – Paris</cite>
           </blockquote>
-          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
-            <p class="text-slate-700 mb-4">"Factures en 1 clic, fin des oublis – +2 chantiers/mois direct."</p>
-            <cite class="text-emerald-600 font-semibold">Marie, Électricienne à Lyon</cite>
+          <blockquote class="p-6 bg-emerald-50 rounded-xl">
+            <p class="text-lg mb-4">« Factur-X direct, mon comptable adore. »</p>
+            <cite class="font-semibold text-emerald-700">Marie, électricienne – Lyon</cite>
           </blockquote>
-          <blockquote class="p-6 bg-white rounded-xl shadow-sm">
-            <p class="text-slate-700 mb-4">"Planning clair, clients voient tout – -10 appels/semaine."</p>
-            <cite class="text-emerald-600 font-semibold">Paul, Maçon à Bordeaux</cite>
+          <blockquote class="p-6 bg-emerald-50 rounded-xl">
+            <p class="text-lg mb-4">« Plus un seul appel client pour savoir où j’en suis. »</p>
+            <cite class="font-semibold text-emerald-700">Paul, maçon – Bordeaux</cite>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Tarifs simples pour petites équipes</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-          <div class="p-8 border rounded-xl">
-            <h3 class="text-2xl font-bold mb-2">Découverte</h3>
-            <p class="text-4xl font-bold text-emerald-600 mb-4">Gratuit</p>
-            <ul class="space-y-2 mb-6">
-              <li>• 5 devis actifs</li>
-              <li>• Factures illimitées</li>
-              <li>• Planning 2 semaines</li>
-            </ul>
-            <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" class="w-full px-6 py-3 border rounded-full font-semibold hover:bg-slate-50">Commencer gratuit</button>
-          </div>
-          <div class="p-8 border-2 border-emerald-600 rounded-xl relative">
-            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">Recommandé</span>
-            <h3 class="text-2xl font-bold mb-2">Pro</h3>
-            <p class="text-4xl font-bold text-emerald-600 mb-4">19€/mois</p>
-            <ul class="space-y-2 mb-6">
-              <li>• Tout illimité</li>
-              <li>• Planning mois + offline</li>
-              <li>• Tableau de bord avancé</li>
-              <li>• Support prioritaire</li>
-            </ul>
-            <a href="https://calendly.com/ton-lien/rdv-artisansmart" class="block w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Réserver early (tarif à vie)</a>
-          </div>
-          <div class="p-8 border rounded-xl opacity-70">
-            <h3 class="text-2xl font-bold mb-2">Équipe (bientôt)</h3>
-            <p class="text-4xl font-bold text-slate-500 mb-4">À venir</p>
-            <ul class="space-y-2 mb-6">
-              <li>• Multi-utilisateurs</li>
-              <li>• Stats avancées</li>
-              <li>• Intégrations compta</li>
-            </ul>
-            <button class="w-full px-6 py-3 border rounded-full text-slate-400 cursor-not-allowed">Bientôt</button>
-          </div>
-        </div>
-        <div class="text-center mt-8 bg-orange-50 p-6 rounded-xl">
-          <p class="text-xl font-bold text-orange-700">⚡ Seulement 15 places early restantes</p>
+    <!-- PRICING -->
+    <section id="pricing" class="py-16 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Tarif unique – tout compris</h2>
+        <div class="max-w-md mx-auto bg-white p-10 rounded-3xl border-4 border-emerald-600 shadow-xl relative">
+          <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-6 py-2 rounded-full text-sm font-bold">Offre early</span>
+          <p class="text-5xl font-bold text-emerald-600 mb-2">19 € <span class="text-2xl">HT/mois</span></p>
+          <p class="text-xl text-slate-600 mb-8">au lieu de 39 € – tarif garanti à vie</p>
+          <ul class="space-y-3 text-left mb-8 text-slate-700">
+            <li>• IA devis + Factur-X incluse</li>
+            <li>• Planning offline illimité</li>
+            <li>• Support 7j/7 par artisans</li>
+            <li>• 14 jours gratuits sans CB</li>
+          </ul>
+          <a href="https://calendly.com/ton-lien/rdv-artisansmart" class="block w-full py-4 bg-emerald-600 text-white text-xl font-bold rounded-full hover:bg-emerald-500">
+            Réserver ma place early (15 restantes)
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Waitlist Form -->
-    <section id="waitlist" class="py-16 bg-slate-50">
-      <div class="max-w-md mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Rejoins les pilotes</h2>
-        <p class="text-slate-600 mb-8">On sélectionne 20 artisans pour tester et co-construire.</p>
-        <form name="waitlist" method="POST" data-netlify="true" class="space-y-4" onsubmit="handleFormSubmit(event)">
+    <!-- WAITLIST -->
+    <section id="waitlist" class="py-20 bg-white">
+      <div class="max-w-lg mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">Rejoins les 20 premiers pilotes</h2>
+        <p class="text-xl text-slate-600 mb-10">On t’appelle sous 48h pour configurer ton compte et ton tarif early.</p>
+        <form name="waitlist" method="POST" data-netlify="true" class="space-y-6" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="form-name" value="waitlist" />
-          <input type="email" name="email" placeholder="Ton email" required class="w-full p-4 rounded-lg border focus:ring-emerald-500" />
-          <input type="text" name="metier" placeholder="Ton métier (plombier, etc.)" class="w-full p-4 rounded-lg border focus:ring-emerald-500" />
-          <label class="flex gap-2 text-sm text-slate-600">
-            <input type="checkbox" name="rgpd" required /> J'accepte d'être contacté (RGPD conforme)
-          </label>
-          <button type="submit" class="w-full p-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-500">Rejoindre les pilotes</button>
-        </form>
-        <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 rounded-lg">
-          <p class="text-emerald-700 font-semibold">Merci ! On t'appelle sous 48h.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-8 text-center text-sm mt-auto">
-      <p>&copy; 2025 ArtisanSmart – Fabriqué en France pour les artisans. | <a href="#waitlist" class="text-emerald-400 hover:underline">Inscription</a></p>
-    </footer>
-  </div>
-
-  <script>
-    // Année
-    document.querySelector('footer p').innerHTML = document.querySelector('footer p').innerHTML.replace('2025', new Date().getFullYear());
-
-    // Form submit
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      fetch('/', { method: 'POST', body: new FormData(form) }).then(() => {
-        form.classList.add('hidden');
-        document.getElementById('form-success').classList.remove('hidden');
-      });
-    }
-
-    // Scroll ancres
-    if (location.hash) setTimeout(() => document.querySelector(location.hash)?.scrollIntoView({behavior: 'smooth'}), 100);
-  </script>
-</body>
-</html>
+          <input type="email" name="email" placeholder="Ton email" required class="w-full p-4 rounded-lg border-2 focus:border-emerald-500 focus:ring-emerald
